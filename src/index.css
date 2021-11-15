@@ -21,6 +21,23 @@ html {
   --border-color: #e0e0e0;
 }
 
+.posterImg {
+	-webkit-box-reflect: below 5px
+		linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.4));
+	-webkit-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.posterImg:hover {
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.featured_wrapper {
+	position: relative;
+}
 
 *,
 *::before,

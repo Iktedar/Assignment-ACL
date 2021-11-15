@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Report from '../views/report/Report';
+import Movies from '../views/Movies';
+
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
 import clsx from "clsx";
-import Header from "./Header";
 
 const useStyles = makeStyles({
     root: {
@@ -12,7 +12,6 @@ const useStyles = makeStyles({
     MainContainer: {
         padding: '2rem 120px',
         position: "relative",
-        top: '100px'
     }
 })
 
@@ -20,7 +19,6 @@ const Content = () => {
     const classes = useStyles();
     return (
         <div className={classes.MainContainer}>
-            <Header/>
             <main
                 className={clsx(classes.content, {
                     [classes.contentShift]: true
@@ -30,7 +28,7 @@ const Content = () => {
                 <Router>
                     <React.Suspense>
                         <Switch>
-                            <Route path="/report" component={Report}/>
+                            <Route path="/" component={Movies}/>
                         </Switch>
                     </React.Suspense>
                 </Router>

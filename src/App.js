@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
 import { CssBaseline, ThemeProvider, createMuiTheme } from "@material-ui/core";
 import Content from "./layout/Content";
-import Login from './views/login/Login';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -43,9 +42,7 @@ function App() {
         <Router>
            <React.Suspense>
              <Switch>
-              <Route path="/" exact component={Login}/>
-              <Route path="/login" component={Login}/>
-              <Route path="*" component={Content}/>
+              <Route path="/" component={Content}/>
              </Switch>
            </React.Suspense>
        </Router>
