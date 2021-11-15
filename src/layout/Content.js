@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Movies from '../views/Movies';
+import Login from '../views/Checkout';
+
 
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
 import clsx from "clsx";
@@ -28,7 +30,9 @@ const Content = () => {
                 <Router>
                     <React.Suspense>
                         <Switch>
-                            <Route path="/" component={Movies}/>
+                            <Route path="/" component={Login}/>
+                            <Route path="/movies" component={Movies}/>
+
                         </Switch>
                     </React.Suspense>
                 </Router>
